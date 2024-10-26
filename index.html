@@ -5,8 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Portfolio</title>
     <link rel="stylesheet" href="resources/style.css">
+    <style>
+        /* Optional: To hide the audio player */
+        audio {
+            display: none;
+        }
+    </style>
 </head>
 <body>
+    <audio id="background-audio" src="resources/images/enemy.mp3" preload="auto"></audio> <!-- Replace with your audio file path -->
+    
     <nav>
         <a href="#introduction">Introduction</a>
         <a href="#about">About Me</a>
@@ -26,6 +34,7 @@
         <h2>About Me</h2>
         <p>I have a strong passion for game development, programming, and technology. I find joy in creating games and learning new programming skills. In my free time, I like to relax by playing various games and listening to soothing music. I also enjoy experimenting with different design frameworks to see how they work and to enhance my skills.</p>
         <img src="resources/images/me&bb.jpg" alt="nani">
+        <img src="resources/images/drive.jpg" alt="nani">
         <img src="resources/images/sleep.jpg" alt="nani">
     </section>
 
@@ -101,5 +110,14 @@
         <p>Telegram: <a href="https://t.me/Yohhan21" target="_blank">https://t.me/Yohhan21</a></p>
         <p>Email: <a href="mailto:joehaneslauglaug@gmail.com">joehaneslauglaug@gmail.com</a></p>
     </section>
+
+    <script>
+        window.onload = function() {
+            var audio = document.getElementById("background-audio");
+            audio.play().catch(function(error) {
+                console.log("Audio playback failed: " + error);
+            });
+        };
+    </script>
 </body>
 </html>
